@@ -11,7 +11,7 @@ Dashboard built in react to keep track of the top 25 crypto currencies/tokens an
 - Websocket based refresh
 - Last Updated - 5 Min refresh on coinmarketcap API
 
-Example available on [https://solutiondesign.io](solutiondesign.io)
+Example available on https://solutiondesign.io
 
 ## Install dependencies
 npm install
@@ -22,4 +22,4 @@ npm start
 ## Build packages
 npm run-script build
 
-####### This project was originally forked from: <https://github.com/Daven-/crypto>
+This project was originally forked from: <https://github.com/Daven-/crypto>
