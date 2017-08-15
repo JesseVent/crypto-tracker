@@ -12,7 +12,7 @@ label{
 }
 
 .App-header {
-  background-color: #3C3B45;
+  background-color: #FAFAFA;
   height: 80px;
   padding: 20px;
   color: white;
@@ -34,34 +34,56 @@ input[type]{
   margin-right: 4px;
 }
 .button-primary:disabled{
-  background-color: #25242B !important;
+  background-color: #e91e63 !important;
 }
 /*/*/
 
 .coin-container{
-  background-color: #25242B;
+  background-color: #00b0ff;
 
   text-align: left;
 
   padding: 16px 16px 16px 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   //width: 200px;
   height: 350px;
 
   border-radius: 6px;
 }
+.coin-change{
+    text-align: left;
+    padding: 4px 8px 4px 8px;
+    padding-top: 24px;
+    margin-bottom: 16px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 500;
+    font-size: 2.6rem !important;
+}
 .coin-container h1{
-  color: #686576;
+font-size: 48px;
+color: rgba(255,255,255,0.80);
+letter-spacing: -0.01px;
 }
 .coin-container h3{
   text-align: center;
-  color: white;
+  /* Bitcoin: */
+font-size: 56px;
+color: #FFFFFF;
+letter-spacing: -0.01px;
 }
 .coin-container p{
-  color: #686576;
-  font-size: 1.7rem;
-
+  color: rgba(255,255,255,0.80);
+  font-size: 2.2rem;
+  line-height: 1.6rem;
   margin-left: 8px;
+  text-align: center;
+}
+.coin-container p span{
+
+  font-size: 2.2rem;
+line-height: 1.6rem;
+padding-top: 16px;
+  margin-left: 16px;
 }
 /*/*/
 
@@ -72,7 +94,7 @@ input[type]{
   color: white;
   font-size: 1.5rem;
   float: right;
-
+background-color: #e91e63;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -83,22 +105,26 @@ input[type]{
 /*/*/
 
 #coin-total {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 300;
+  color: #FFFFFF;
+  font-size: 3.6rem;
+  font-weight: 500;
   margin-top: 24px;
 }
 /*/*/
 
 .red {
-  color: #f44336;
+font-size: 36px;
+color: #FFB5B0;
+letter-spacing: -0.01px;
 }
 .b-red {
   border-color: red;
 }
 
 .green {
-  color: #4caf50;
+font-size: 36px;
+color: #B1FFAB;
+letter-spacing: -0.01px;
 }
 
 .white-f {

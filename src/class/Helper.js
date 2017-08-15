@@ -27,7 +27,7 @@ export default class Helper {
     let filteredCoins = Cookies.get('filteredCoins');
     if (typeof filteredCoins === 'undefined' || filteredCoins.replace(' ', '') === "") {
       return coins.filter(function(coin) {
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 24; i++) {
           if (coin.rank * 1 === i + 1) {
             return 1;
           }

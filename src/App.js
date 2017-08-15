@@ -56,7 +56,7 @@ class App extends Component {
       }
 
     };
-    xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/", true);
+    xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=aud&limit=25", true);
     xhttp.send()
   }
 
@@ -128,8 +128,8 @@ class App extends Component {
             day7: feed.percent_change_7d
           }
 
-          let holdAmount = typeof localStorage[feed.symbol] === 'undefined' ? 0 : localStorage[feed.symbol] * feed.price_usd;
-          let holdings = ( <p> hold: {formatNumber(holdAmount)} </p>);
+          let holdAmount = typeof localStorage[feed.symbol] === 'undefined' ? 0 : localStorage[feed.symbol] * feed.price_aud;
+          let holdings = ( <p> Worth: {formatNumber(holdAmount)} </p>);
           coinTotal += holdAmount;
           let name = '';
           // short names only
@@ -139,7 +139,7 @@ class App extends Component {
             name = feed.name;
           }
           return (
-                <CoinContainer key={i} name={name} price_usd={feed.price_usd} classes={classes} percent={percent}>
+                <CoinContainer key={i} name={name} price_usd={formatNumber(feed.price_aud)} classes={classes} percent={percent}>
                   {holdings}
                 </CoinContainer>
           );
