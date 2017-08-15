@@ -9,8 +9,10 @@ const CoinContainer = (props) => (
           <p>01H:<span className={props.classes.hour}> {props.percent.hour}%</span></p>
           <p>24H:<span className={props.classes.day}> {props.percent.day}%</span></p>
           <p>01W:<span className={props.classes.day7}> {props.percent.day7}%</span></p>
-        </div>
         {props.children}
+        </div>
+
+        <p className="last-updated">{props.last_updated}</p>
     </div>
   </div>
 );

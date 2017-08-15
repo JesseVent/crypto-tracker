@@ -56,9 +56,10 @@ class App extends Component {
       }
 
     };
-    xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=aud&limit=25", true);
+    xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=aud", true);
     xhttp.send()
   }
+
 
   /**
    * save filter preference in cookie
@@ -105,13 +106,12 @@ class App extends Component {
   handleExpand(){
     this.expand.classList.toggle('expand');
   }
-
-
   renderSpinners() {
     if (this.state.feed !== null) {
       let feed = this.state.feed;
       let getColor = this.helper.getColor;
       let formatNumber = this.helper.formatNumber;
+      let convertTimestamp = this.helper.convertTimestamp;
       let coins = [];
       let coinTotal = 0;
 
@@ -138,8 +138,9 @@ class App extends Component {
           }else{
             name = feed.name;
           }
+          let lastUpdated = convertTimestamp(feed.last_updated);
           return (
-                <CoinContainer key={i} name={name} price_usd={formatNumber(feed.price_aud)} classes={classes} percent={percent}>
+                <CoinContainer key={i} name={name} price_usd={formatNumber(feed.price_aud)} last_updated = {lastUpdated} classes={classes} percent={percent}>
                   {holdings}
                 </CoinContainer>
           );
@@ -166,7 +167,7 @@ class App extends Component {
             <div id="coin-total"></div>
           </div>
           <div className="three columns expand-btn-container">
-            <button id="expand-btn" onClick={this.handleExpand}>&#43;</button>
+            <button id="expand-btn" onClick={this.handleExpand}>PORTFOLIO</button>
           </div>
           <div className="twelve columns expand " ref={(value)=>this.expand = value}>
             <form onSubmit={this.handleSubmit} >
@@ -182,7 +183,7 @@ class App extends Component {
             </form>
           </div>
         </div>
-        <img id="loading-gif" style={{display: 'block',margin: "0 auto"}} src="./loading.gif " alt="Loading..."></img>
+        <img className="loading-gif" id="loading-gif" style={{display: 'block',margin: "0 auto"}} src="./loading.png " alt="Loading..."></img>
         {this.renderSpinners()}
       </div>
     );
