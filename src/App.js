@@ -26,6 +26,7 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSubmitCoinAmount = this.handleSubmitCoinAmount.bind(this);
     this.handleExpand = this.handleExpand.bind(this);
+    this.resetPortfolio = this.resetPortfolio.bind(this);
 
     this.helper = new Helper();
   }
@@ -60,6 +61,18 @@ class App extends Component {
     xhttp.send()
   }
 
+
+    /**
+     * save filter preference in cookie
+     * @param  {[type]} event [description]
+     * @return {[type]}       [description]
+     */
+    handleReset(event) {
+      event.preventDefault();
+      // save coins to filter in a cookie
+      Cookies.remove('filteredCoins', this.state.filteredCoins);
+      this.loadFeed();
+    }
 
   /**
    * save filter preference in cookie
@@ -104,6 +117,9 @@ class App extends Component {
   }
 
   handleExpand(){
+    this.expand.classList.toggle('expand');
+  }
+  resetPortfolio(){
     this.expand.classList.toggle('expand');
   }
   renderSpinners() {
@@ -168,6 +184,7 @@ class App extends Component {
           </div>
           <div className="three columns expand-btn-container">
             <button id="expand-btn" onClick={this.handleExpand}>PORTFOLIO</button>
+            <button id="reset-btn" onClick={this.resetPortfolio}>RESET</button>
           </div>
           <div className="twelve columns expand " ref={(value)=>this.expand = value}>
             <form onSubmit={this.handleSubmit} >

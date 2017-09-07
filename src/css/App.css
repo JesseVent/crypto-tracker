@@ -13,6 +13,7 @@ label{
   height: 80px;
 }
 .loading-gif {
+  transform: rotate(360deg);
   -webkit-animation: ld-coin-v 2s infinite;
   animation: ld-coin-v 2s infinite;
 }

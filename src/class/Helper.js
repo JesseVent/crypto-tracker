@@ -47,6 +47,29 @@ export default class Helper {
     }
   }
 
+  resetCoins(coins) {
+    let filteredCoins = Cookies.remove('filteredCoins');
+    if (typeof filteredCoins === 'undefined' || filteredCoins.replace(' ', '') === "") {
+      return coins.filter(function(coin) {
+        for (var i = 0; i < 24; i++) {
+          if (coin.rank * 1 === i + 1) {
+            return 1;
+          }
+        }
+        return 0;
+      });
+    } else {
+      filteredCoins = filteredCoins.replace(' ', '').split(',');
+      return coins.filter(function(coin) {
+        for (var i = 0; i < filteredCoins.length; i++) {
+          if (filteredCoins[i].toUpperCase() === coin.symbol) {
+            return 1;
+          }
+        }
+        return 0;
+      });
+    }
+  }
   /**
    * Format numbers for better readability
    * @param  {[type]} num
