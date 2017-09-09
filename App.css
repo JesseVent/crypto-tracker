@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Mono');
+
+.App {
+  text-align: center;
+}
+
+label{
+  color: #eee;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.loading-gif {
+  transform: rotate(360deg);
+  -webkit-animation: App-logo-spin 2s infinite;
+  animation: App-logo-spin 2s infinite;
+}
+@keyframes ld-broadcast {
+  0% {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.9);
+  }
+  19% {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.7);
+  }
+  20% {
+    box-shadow: 0 0 0 6px rgba(0,0,0,0.8);
+  }
+  39% {
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.6);
+  }
+  40% {
+    box-shadow: 0 0 0 9px rgba(0,0,0,0.7);
+  }
+  60% {
+    box-shadow: 0 0 0 8px rgba(0,0,0,0.6);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.2);
+  }
+}
+@-webkit-keyframes ld-broadcast {
+  0% {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.9);
+  }
+  19% {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.7);
+  }
+  20% {
+    box-shadow: 0 0 0 6px rgba(0,0,0,0.8);
+  }
+  39% {
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.6);
+  }
+  40% {
+    box-shadow: 0 0 0 9px rgba(0,0,0,0.7);
+  }
+  60% {
+    box-shadow: 0 0 0 8px rgba(0,0,0,0.6);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.2);
+  }
+}
+.App-header {
+  background-color: #FAFAFA;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+input[type]{
+  margin-right: 4px;
+}
+.button-primary:disabled{
+  background-color: #e91e63 !important;
+}
+/*/*/
+
+.coin-container{
+  background-color: #00b0ff;
+  box-shadow: 0 1px 2px 0 rgba(255,255,255,0.20), 0 1px 5px 0 rgba(255,255,255,0.13);
+  border-radius: 6px;
+  text-align: left;
+  padding: 16px 16px 16px 16px;
+  margin-bottom: 16px;
+  //width: 200px;
+  height: 400px;
+}
+.coin-container p last-updated {
+  font-size:8px;
+}
+.coin-change{
+    text-align: left;
+    padding: 4px 8px 4px 8px;
+    padding-top: 24px;
+    margin-bottom: 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 2.6rem !important;
+}
+.coin-container h1{
+font-size: 48px;
+color: rgba(255,255,255,0.80);
+letter-spacing: -0.01px;
+}
+.coin-container h3{
+  text-align: center;
+  /* Bitcoin: */
+font-size: 56px;
+color: #FFFFFF;
+letter-spacing: -0.01px;
+}
+.coin-container p{
+  color: rgba(255,255,255,0.80);
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-left: 8px;
+  text-align: center;
+}
+.coin-change p{
+  color: rgba(255,255,255,0.80);
+  font-size: 2.2rem;
+  line-height: 1.6rem;
+  margin-left: 8px;
+  text-align: center;
+}
+.coin-container p span{
+
+  font-size: 2.2rem;
+line-height: 1.6rem;
+padding-top: 16px;
+  margin-left: 16px;
+}
+/*/*/
+
+.expand-btn-container{
+  text-align: center;
+}
+#expand-btn{
+  color: white;
+  font-size: 1.5rem;
+  float: right;
+background-color: #e91e63;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.expand{
+  display: none;
+}
+/*/*/
+
+#coin-total {
+  color: #FFFFFF;
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-top: 24px;
+}
+/*/*/
+
+.red {
+font-size: 36px;
+color: #FFB5B0;
+letter-spacing: -0.01px;
+}
+.b-red {
+  border-color: #FFB5B0;
+}
+
+.green {
+font-size: 36px;
+color: #B1FFAB;
+letter-spacing: -0.01px;
+}
+
+.white-f {
+  color: white;
+}
